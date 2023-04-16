@@ -1,0 +1,11 @@
+Requestdispatcher vs sendredirect
+
+Dispatcher :
+Le navigateur ignore complètement que cela a eu lieu, de sorte que son URL d’origine reste intacte
+Tout rechargement par navigateur de la page résultante répétera simplement la demande d’origine, avec l’URL d’origine
+
+sendredirect:
+Une redirection est un processus en deux étapes, où l’application Web demande au navigateur de récupérer une deuxième URL, qui diffère de l’original
+Le rechargement de la deuxième URL par le navigateur ne répétera pas la demande d’origine, mais récupérera plutôt la deuxième URL
+La redirection est légèrement plus lente qu’un transfert, car elle nécessite deux requêtes de navigateur, pas une
+Les objets placés dans l’étendue de la demande d’origine ne sont pas disponibles pour la deuxième demande
